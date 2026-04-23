@@ -1,0 +1,253 @@
+/* --- CSS Variables & Reset --- */
+:root {
+    --baytcom-green: #2c8c44; /* The signature logo green */
+    --baytcom-dark: #1a4f27;
+    --background-light: #f4f8f5;
+    --text-dark: #333333;
+    --text-light: #ffffff;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--background-light);
+}
+
+/* --- Buttons --- */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--baytcom-green);
+    color: var(--text-light);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--baytcom-dark);
+}
+
+.btn-secondary {
+    background-color: var(--text-light);
+    color: var(--baytcom-green);
+    border: 2px solid var(--text-light);
+}
+
+/* --- Header & Navigation --- */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: var(--text-light);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-container img {
+    height: 60px; /* Adjust based on actual logo size */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.main-nav a:hover {
+    color: var(--baytcom-green);
+}
+
+/* --- Hero Section --- */
+.hero {
+    background-color: var(--baytcom-dark); /* Placeholder for a background image */
+    color: var(--text-light);
+    padding: 100px 50px;
+    text-align: left;
+}
+
+.hero-content {
+    max-width: 600px;
+    background-color: var(--baytcom-green);
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+/* --- Services Overview --- */
+.services-overview {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 50px;
+    background-color: var(--text-light);
+}
+
+.service-card {
+    background-color: var(--background-light);
+    padding: 30px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    border-top: 4px solid var(--baytcom-green);
+}
+
+/* --- Feature Sections (Mathroom & Study Den) --- */
+.feature-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 50px;
+    gap: 40px;
+}
+
+.feature-section.reverse-layout {
+    flex-direction: row-reverse;
+    background-color: var(--text-light);
+}
+
+.feature-text {
+    flex: 1;
+}
+
+.feature-text h2 {
+    color: var(--baytcom-green);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.feature-text h3 {
+    font-size: 2rem;
+    margin: 10px 0 20px 0;
+}
+
+.feature-text p {
+    margin-bottom: 25px;
+}
+
+.feature-image {
+    flex: 1;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #888;
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    padding: 60px 50px;
+    background-color: var(--background-light);
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form-container {
+    background-color: var(--text-light);
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--font-main);
+}
+
+.form-submit {
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+/* --- Footer --- */
+.site-footer {
+    background-color: var(--baytcom-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 30px;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+    
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .hero {
+        padding: 60px 20px;
+    }
+    
+    .services-overview {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature-section, 
+    .feature-section.reverse-layout {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    
+    .feature-image {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
